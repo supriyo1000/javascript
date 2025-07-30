@@ -27,11 +27,11 @@ var x = 10; // ✅ Allowed
 
 console.log(x);
 
-let y = 5;
-let y = 10; // ❌ Error: Identifier 'y' has already been declared
+// let y = 5;
+// let y = 10; // ❌ Error: Identifier 'y' has already been declared
 
-const z = 5;
-const z = 10; // ❌ Error
+// const z = 5;
+// const z = 10; // ❌ Error
 
 for (var i = 0; i < 3; i++) {
     setTimeout(() => console.log(i), 100);
@@ -49,7 +49,7 @@ function test() {
 test();
 console.log(x); // ✅ 100 (becomes global variable — bad practice!)
 
-const x; // ❌ SyntaxError: Missing initializer
+// const x; // ❌ SyntaxError: Missing initializer
 console.log(x);
 
 
