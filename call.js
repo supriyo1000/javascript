@@ -134,7 +134,7 @@
 
 // const greetUser = greet.bind(user, 35);
 // greetUser();
-Answer:
+// Answer:
 // pgsql
 // Ravi is 25 years old
 // Ravi is 30 years old
