@@ -7,7 +7,7 @@
 // Re - assignment	Allowed	Allowed	Not allowed
 // Hoisting	Hoisted(value is undefined)	Hoisted(TDZ applies)	Hoisted(TDZ applies)
 
-Example:
+// Example:
 
 
 // function test() {
