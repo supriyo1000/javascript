@@ -133,7 +133,7 @@
 //         }, 1000);
 //     })(i);
 // }
-// // Output: 0 1 2
+// Output: 0 1 2
 
 
 // 8. How can you use closures to implement once - only functions ?
