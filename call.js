@@ -13,8 +13,8 @@
 // Answer:
 // const user1 = {
 //     name: "Alice",
-//     greet: function (city) {
-//         console.log(`Hello, I'm ${this.name} from ${city}`);
+//     greet: function (city,state) {
+//         console.log(`Hello, I'm ${this.name} from ${city} in ${state}`);
 //     }
 // };
 
@@ -22,7 +22,7 @@
 //     name: "Bob"
 // };
 
-// user1.greet.call(user2, "Mumbai"); // Hello, I'm Bob from Mumbai
+// user1.greet.call(user2, "Mumbai","maharashtra"); // Hello, I'm Bob from Mumbai
 
 
 // ✅ 3. Use apply() with Math.max

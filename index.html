@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttle Scroll Example</title>
+    <style>
+        body {
+            height: 2000px;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        #output {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: #222;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button id="btn">Click me</button>
+    </div>
+
+    <!-- ✅ Add this element -->
+    <div id="output">Scroll to see throttled logs...</div>
+
+    <script>
+        function throttle(fn, interval) {
+            let lastCall = 0;
+            return function (...args) {
+                const now = Date.now();
+                console.log("Throttling function call");
+                
+                if (now - lastCall >= interval) {
+                    console.log("Function call allowed", now, lastCall);
+                    lastCall = now;
+                    fn.apply(this, args);
+                }
+            };
+        }
+
+        const output = document.getElementById('output');
+
+        window.addEventListener("scroll", throttle(() => {
+            output.textContent = "Throttled scroll at " + new Date().toLocaleTimeString();
+            console.log("Throttled scroll event");
+        }, 1000));
+    </script>
+</body>
+
+</html>
